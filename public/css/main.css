@@ -222,10 +222,10 @@ main#root section#content {
   perspective: 1000px;
 }
 .card .word, .card .translation {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background: #ffffff;
     font-size: 33px;
     font-weight: 500;
@@ -239,7 +239,6 @@ main#root section#content {
     transition: 600ms;
     cursor: pointer;
 }
-
 .card .translation {
     transform: rotateX(-180deg);
 }
@@ -247,7 +246,6 @@ main#root section#content {
 .is-flip .word {
     transform: rotateX(-180deg);
 }
-
 .is-flip .translation {
     transform: rotateX(-360deg);
 }
@@ -555,12 +553,10 @@ main#root section#content {
     user-select: none;
     cursor: pointer;
 }
-
 .add-word-form .add-row-words .word-block .word-panel a#delete-word, .add-word-form .edit-row-words .word-block .word-panel a#delete-word, .edit-word-form .add-row-words .word-block .word-panel a#delete-word, .edit-word-form .edit-row-words .word-block .word-panel a#delete-word {
     background: #f0f03a !important;
     color: red;
 }
-
 .add-word-form .add-row-words .word-block .list-examples, .add-word-form .edit-row-words .word-block .list-examples, .edit-word-form .add-row-words .word-block .list-examples, .edit-word-form .edit-row-words .word-block .list-examples {
     visibility: hidden;
     height: 0;
@@ -568,7 +564,6 @@ main#root section#content {
     border-top: 1px solid #ccc;
     margin-top: 30px;
 }
-
 .add-word-form .add-row-words .word-block .list-examples #add-example, .add-word-form .edit-row-words .word-block .list-examples #add-example, .edit-word-form .add-row-words .word-block .list-examples #add-example, .edit-word-form .edit-row-words .word-block .list-examples #add-example {
     background: #ff49a0;
     border-radius: 5px;
@@ -582,12 +577,10 @@ main#root section#content {
     padding: 9px 14px;
     cursor: pointer;
 }
-
 .add-word-form .add-row-words .word-block .list-examples .example-block, .add-word-form .edit-row-words .word-block .list-examples .example-block, .edit-word-form .add-row-words .word-block .list-examples .example-block, .edit-word-form .edit-row-words .word-block .list-examples .example-block {
     width: inherit;
     margin-top: 20px;
 }
-
 .add-word-form .add-row-words .word-block .list-examples .example-block input, .add-word-form .edit-row-words .word-block .list-examples .example-block input, .edit-word-form .add-row-words .word-block .list-examples .example-block input, .edit-word-form .edit-row-words .word-block .list-examples .example-block input {
     background: #f6f7fb;
     border-bottom: 1px solid #EDEFF4;
@@ -595,17 +588,14 @@ main#root section#content {
     padding: 9px 14px;
     width: 100%;
 }
-
 .add-word-form .add-row-words .word-block .list-examples.open, .add-word-form .edit-row-words .word-block .list-examples.open, .edit-word-form .add-row-words .word-block .list-examples.open, .edit-word-form .edit-row-words .word-block .list-examples.open {
     visibility: visible;
     height: auto;
 }
-
 .add-word-form .button-save, .edit-word-form .button-save {
     margin-top: 20px;
     margin-bottom: 120px;
 }
-
 .add-word-form .button-save button, .edit-word-form .button-save button {
     padding: 10px 20px;
     background: #423ed8;
@@ -615,7 +605,7 @@ main#root section#content {
 }
 
 #up-button {
-  position: fixed;
+    position: fixed;
     padding: 7px 17px;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -630,12 +620,10 @@ main#root section#content {
     width: inherit;
     margin-top: 20px;
 }
-
 .block-import h3 {
     display: block;
     margin: 10px 0px;
 }
-
 .block-import textarea {
     width: 100%;
     min-height: 400px;

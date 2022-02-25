@@ -138,7 +138,7 @@ final class ManageController
 
         $data = $request->input('words');
 
-        preg_match_all("#(?<word>[а-ёА-Я\w_ ]+)[\s]+-[\s]+(?<translation>[\w ]+)#uim", $data, $matches, PREG_SET_ORDER);
+        preg_match_all("#(?<word>[а-яА-ЯЁе\.\,\"\'\?\!\w_ ]+)[\s]+-[\s]+(?<translation>[а-яА-ЯЁе\.\,\"\'\?\!\w ]+)#uim", $data, $matches, PREG_SET_ORDER);
         $matches = $this->clearRequest($matches);
 
         $result = $this->wordsService->importWords(libraryId: $libraryId, data: $matches);

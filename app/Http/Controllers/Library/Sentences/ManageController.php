@@ -94,7 +94,6 @@ final class ManageController
         return 'Ok';
     }
 
-
     public function import($libraryId)
     {
         if (!Gate::allows('can-edit-library', $libraryId)) {
@@ -115,7 +114,7 @@ final class ManageController
 
         $data = $request->input('sentences');
 
-        preg_match_all("#(?<sentence>[а-ёА-Я\w_ ]+)[\s]+-[\s]+(?<translation>[\w ]+)#uim", $data, $matches, PREG_SET_ORDER);
+        preg_match_all("#(?<sentence>[а-яА-ЯЁе\?\!\.\,\"\'\w_ -]+)[\s]+-[\s]+(?<translation>[а-яА-ЯЁе\?\!\.\,\"\'\w -]+)#uim", $data, $matches, PREG_SET_ORDER);
         $matches = $this->clearRequest($matches);
 
         $result = $this->sentencesService->importWords(libraryId: $libraryId, data: $matches);
