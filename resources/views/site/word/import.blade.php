@@ -19,7 +19,7 @@
         <form action="{{ route('manage.library.words.import.store', $libraryId) }}" method="POST" id="form">
             @csrf
             <div class="block-import">
-                <h3>Шаблон - "Слово на английском - слово на русском"</h3>
+                <h3>Шаблон - "Слово на английском - слово на русском". Шаблон: ({{ config('site.regexp.word') }})</h3>
                 <textarea name="words" placeholder="Слово - Перевод"></textarea>
             </div>
 

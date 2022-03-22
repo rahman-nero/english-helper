@@ -19,7 +19,8 @@
         <form action="{{ route('manage.library.sentences.import.store', $libraryId) }}" method="POST" id="form">
             @csrf
             <div class="block-import">
-                <h3>Шаблон - "<b>Предложение на английском</b> - <b>Предложение на русском</b>"</h3>
+                <h3>Шаблон - "<b>Предложение на английском</b> - <b>Предложение на русском</b>". Шаблон:
+                    ({{ config('site.regexp.sentence') }})</h3>
                 <textarea name="sentences" placeholder="Предложение - Перевод"></textarea>
             </div>
 

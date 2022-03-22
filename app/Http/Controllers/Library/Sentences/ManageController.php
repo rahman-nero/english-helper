@@ -113,8 +113,9 @@ final class ManageController
         }
 
         $data = $request->input('sentences');
+        $regexp = config('site.regexp.sentence');
 
-        preg_match_all("#(?<sentence>[а-яА-ЯЁе\?\!\.\,\"\'\w_ -]+)[\s]+-[\s]+(?<translation>[а-яА-ЯЁе\?\!\.\,\"\'\w -]+)#uim", $data, $matches, PREG_SET_ORDER);
+        preg_match_all("${regexp}uim", $data, $matches, PREG_SET_ORDER);
         $matches = $this->clearRequest($matches);
 
         $result = $this->sentencesService->importWords(libraryId: $libraryId, data: $matches);

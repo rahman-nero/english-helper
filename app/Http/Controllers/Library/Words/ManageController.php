@@ -138,7 +138,9 @@ final class ManageController
 
         $data = $request->input('words');
 
-        preg_match_all("#(?<word>[а-яА-ЯЁе\.\,\"\'\?\!\w_ ]+)[\s]+-[\s]+(?<translation>[а-яА-ЯЁе\.\,\"\'\?\!\w ]+)#uim", $data, $matches, PREG_SET_ORDER);
+        $regexp = config('site.regexp.word');
+
+        preg_match_all("${regexp}uim", $data, $matches, PREG_SET_ORDER);
         $matches = $this->clearRequest($matches);
 
         $result = $this->wordsService->importWords(libraryId: $libraryId, data: $matches);
